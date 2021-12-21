@@ -17,6 +17,7 @@ import { AuthService } from 'src/auth.service';
 import { AuthGuard } from 'src/auth-guard.service';
 import { CanDeactivateGuard } from '../can-deactivate.guard.service';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { ServerResolver } from './servers/server/server-resolver.service';
 
 
 
@@ -37,7 +38,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [ServersService, AuthService, AuthGuard, CanDeactivateGuard],
+  providers: [ServersService, AuthService, AuthGuard, CanDeactivateGuard, ServerResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
